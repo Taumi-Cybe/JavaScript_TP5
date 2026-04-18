@@ -1,4 +1,4 @@
-// Je démarre le serveur (structure proche de la demo du prof).
+// Je démarre le serveur.
 const express = require('express')
 const cors = require('cors')
 const path = require('path')
