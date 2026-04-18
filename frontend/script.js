@@ -1,4 +1,4 @@
-// Je gère le frontend.
+// je m'occupe du frontend.
 // Je fais : charger, ajouter, modifier, supprimer.
 const API = 'http://localhost:3000/todos'
 
