@@ -34,7 +34,7 @@ npm start
 node backend/app.js
 ```
 
-4. Ouvrir le frontend : double‑clic sur [index.html](index.html) dans le navigateur.
+4. Ouvrir le frontend :[index.html](index.html) dans le navigateur.
 
 **API (exemples)**
 
@@ -43,7 +43,7 @@ node backend/app.js
 - `PUT /todos/:id` — modifier : `{ "titre":..., "terminee":true|false }`
 - `DELETE /todos/:id` — supprimer
 
-Je gère les erreurs :
+Concernants les erreurs :
 
 - Si le `titre` est manquant → 400 `{ "message": "titre manquant" }`
 - Si l'élément n'existe pas → 404 `{ "message": "tache non trouvée" }`
