@@ -53,10 +53,3 @@ Je gère les erreurs :
 
 - POST → GET → PUT → DELETE : tous fonctionnent (CRUD testé).
 - Test d'erreurs : POST sans titre (400), PUT id inconnu (404), écriture fichier simulée → 500.
-
-**Remarques pour la remise**
-
-- Le dossier `node_modules` a été supprimé pour alléger l'envoi.
-- Conserver `package.json` et `package-lock.json` pour reproductibilité.
-
-Si tu veux, je peux préparer un fichier zip prêt à rendre ou un court rapport à coller dans Moodle. Dis ce que tu préfères.
