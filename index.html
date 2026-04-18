@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        width: 100%;
+        max-width: 500px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+      }
+
+      .formulaire-ajout {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      .formulaire-ajout input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+      }
+
+      .formulaire-ajout button {
+        padding: 10px 16px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .formulaire-ajout button:hover {
+        background-color: #45a049;
+      }
+
+      .message-erreur {
+        color: red;
+        font-size: 13px;
+        margin-bottom: 10px;
+        display: none;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        gap: 10px;
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      .tache-titre {
+        flex: 1;
+        font-size: 15px;
+        cursor: pointer;
+      }
+
+      .tache-titre.terminee {
+        text-decoration: line-through;
+        color: #999;
+      }
+
+      .input-modifier {
+        flex: 1;
+        padding: 6px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: none;
+      }
+
+      .btn-modifier {
+        padding: 6px 10px;
+        background-color: #2196f3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      .btn-modifier:hover {
+        background-color: #1976d2;
+      }
+
+      .btn-valider {
+        padding: 6px 10px;
+        background-color: #ff9800;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+        display: none;
+      }
+
+      .btn-valider:hover {
+        background-color: #e68900;
+      }
+
+      .btn-supprimer {
+        padding: 6px 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 13px;
+      }
+
+      .btn-supprimer:hover {
+        background-color: #d32f2f;
+      }
+
+      .aucune-tache {
+        text-align: center;
+        color: #999;
+        font-size: 14px;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Todo App</h1>
+
+      <div class="formulaire-ajout">
+        <input
+          type="text"
+          id="input-nouvelle-tache"
+          placeholder="Nouvelle tâche..."
+        />
+        <button onclick="add()">Ajouter</button>
+      </div>
+
+      <p class="message-erreur" id="message-erreur"></p>
+
+      <ul id="liste-todos"></ul>
+      <p class="aucune-tache" id="aucune-tache" style="display: none">
+        Aucune tâche pour le moment.
+      </p>
+    </div>
+
+    <script src="frontend/script.js"></script>
+  </body>
+</html>
